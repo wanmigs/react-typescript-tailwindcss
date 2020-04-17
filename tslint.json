@@ -1,0 +1,24 @@
+{
+  "extends": ["tslint:recommended", "tslint-react"],
+  "rules": {
+    "array-type": [true, "array-simple"],
+    "jsx-wrap-multiline": false,
+    "file-name-casing": [true, "pascal-case"],
+    "interface-name": [true, "never-prefix"],
+    "arrow-parens": [true, "ban-single-arg-parens"],
+    "max-line-length": false,
+    "class-name": true,
+    "member-ordering": false,
+    "member-access": true,
+    "object-literal-sort-keys": false,
+    "variable-name": [true, "check-format", "allow-pascal-case"],
+    "no-unused-variable": true,
+    "no-duplicate-imports": true,
+    "jsx-no-multiline-js": false,
+    "completed-docs": [true, "functions", "methods", "interfaces", "enums"],
+    "indent": [true, "spaces", 4],
+    "no-namespace": [true, "allow-declarations"],
+    "no-empty-interface": false
+  },
+  "defaultSeverity": "error"
+}

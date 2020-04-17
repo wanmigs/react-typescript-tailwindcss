@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App() {
+import Home from "pages/home/Home";
+import PageNotFound from "pages/PageNotFound";
+
+const App = () => {
+  const routes: Array<{
+    path: string;
+    component: React.FC<{}>;
+    props?: {};
+  }> = [
+    { path: "/", component: Home, props: { exact: true } },
+    { path: "/about", component: Home },
+    { path: "*", component: PageNotFound },
+  ];
+
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p className='text-blue-600 hover:text-red-400 transition-all duration-500'>
-          Edit <code>src/App.tsx</code> and save to reloads.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="antialiased flex flex-col h-screen">
+      <section className="container flex-1 mx-auto p-6">
+        <Router>
+          <Switch>
+            {routes.map((route, key) => (
+              <Route
+                path={route.path}
+                component={route.component}
+                {...route.props}
+                key={key}
+              />
+            ))}
+          </Switch>
+        </Router>
+      </section>
     </div>
   );
-}
+};
 
 export default App;
