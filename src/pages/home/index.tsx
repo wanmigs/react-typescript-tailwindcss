@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { getFloors } from "services/Floor";
-import { Floor } from "models/Floor.model";
-import FloorItem from "./components/FlootItem";
+import React, { useEffect, useState } from 'react';
+import { getFloors } from 'services/Floor';
+import { Floor } from 'models/Floor.model';
+import FloorItem from './components/FlootItem';
 
 const Home: React.FC = () => {
   const [floors, setFloors] = useState<Floor[]>([]);

@@ -1,0 +1,25 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:100,200,300,400,500,600,700,800,900&display=swap');
+
+body,
+html {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  background-color: #efefef;
+}
+
+.feather-icon {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@import 'tailwindcss/utilities';

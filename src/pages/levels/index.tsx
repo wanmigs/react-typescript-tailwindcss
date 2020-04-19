@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getFloors } from "services/Floor";
 import { Floor } from "models/Floor.model";
 import { Link } from "react-router-dom";
-import "./Levels.scss";
+import "dist/css/levels.scss"
 
 const AllLevels: React.FC = () => {
   const [floors, setFloors] = useState<Floor[]>([]);
