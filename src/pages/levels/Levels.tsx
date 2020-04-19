@@ -8,7 +8,7 @@ const AllLevels: React.FC = () => {
   const [floors, setFloors] = useState<Floor[]>([]);
 
   useEffect(() => {
-    getFloors().then((data) => {
+    getFloors().then(data => {
       setFloors(data);
     });
   }, []);

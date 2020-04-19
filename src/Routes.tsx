@@ -1,7 +1,9 @@
-import Home from "pages/home";
-import Levels from "pages/levels";
-import Level from "pages/level";
-import PageNotFound from "pages/PageNotFound";
+import React, { lazy } from 'react';
+
+const Home = lazy(() => import('pages/home/Home'));
+const Levels = lazy(() => import('pages/levels/Levels'));
+const Level = lazy(() => import('pages/level/Level'));
+const PageNotFound = lazy(() => import('pages/PageNotFound'));
 
 /**
  * Definition of route objects
@@ -13,10 +15,10 @@ interface RouteProps {
 }
 
 const routes: RouteProps[] = [
-  { path: "/", component: Home, props: { exact: true } },
-  { path: "/levels", component: Levels },
-  { path: "/level/:id", component: Level },
-  { path: "*", component: PageNotFound },
+  { path: '/', component: Home, props: { exact: true } },
+  { path: '/levels', component: Levels },
+  { path: '/level/:id', component: Level },
+  { path: '*', component: PageNotFound },
 ];
 
 export default routes;
