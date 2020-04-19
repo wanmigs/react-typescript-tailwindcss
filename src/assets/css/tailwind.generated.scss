@@ -606,6 +606,120 @@ video {
   }
 }
 
+@import url("https://fonts.googleapis.com/css?family=Quicksand:100,200,300,400,500,600,700,800,900&display=swap");
+
+body,
+html {
+  font-family: "Quicksand", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  background-color: #efefef;
+}
+
+.feather-icon {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.box {
+  background-color: #cbd5e0;
+  height: 16rem;
+  width: 16rem;
+  --transform-translate-x: 0;
+  --transform-translate-y: 0;
+  --transform-rotate: 0;
+  --transform-skew-x: 0;
+  --transform-skew-y: 0;
+  --transform-scale-x: 1;
+  --transform-scale-y: 1;
+  transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+  position: absolute;
+  opacity: 0.75;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 100ms;
+  --transform-skew-y: -50deg;
+  --transform-skew-x: 35deg;
+  --transform-rotate: 104deg;
+  &:first-child {
+    opacity: 1;
+  }
+  &:hover {
+    z-index: 10;
+  }
+}
+
+.levels {
+  background-color: #553c9a;
+  transition-duration: 300ms;
+  height: 5rem;
+  align-items: flex-start;
+  padding: 1rem;
+  transition-property: all;
+  border-bottom-width: 1px;
+  .level-details {
+    transition-duration: 500ms;
+    opacity: 0;
+    transition-property: all;
+  }
+  .levels-image {
+    transition-duration: 300ms;
+    height: 12rem;
+    opacity: 0;
+    --transform-translate-x: 0;
+    --transform-translate-y: 0;
+    --transform-rotate: 0;
+    --transform-skew-x: 0;
+    --transform-skew-y: 0;
+    --transform-scale-x: 1;
+    --transform-scale-y: 1;
+    transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+    transition-property: all;
+    --transform-translate-y: -3rem;
+    --transform-translate-x: 2rem;
+    position: relative;
+    z-index: 10;
+  }
+  &.active,
+  &:hover {
+    height: 8rem;
+    .level-details {
+      opacity: 1;
+    }
+    & > div .levels-floor {
+      display: none;
+    }
+    & > div .levels-image {
+      opacity: 1;
+      --transform-translate-y: 0;
+    }
+  }
+  .levels-floor {
+    position: absolute;
+    background-color: #fff;
+    --transform-translate-x: 0;
+    --transform-translate-y: 0;
+    --transform-rotate: 0;
+    --transform-skew-x: 0;
+    --transform-skew-y: 0;
+    --transform-scale-x: 1;
+    --transform-scale-y: 1;
+    transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+    transform-origin: bottom right;
+    opacity: 0.75;
+    --transform-skew-y: 0deg;
+    --transform-skew-x: -32deg;
+    --transform-rotate: 45deg;
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

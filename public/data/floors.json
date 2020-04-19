@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "level": "Level 1",
+    "available": 35,
+    "amenities": ["Kitchen", "Outdoor", "Lounge"]
+  },
+  {
+    "id": 2,
+    "level": "Level 2",
+    "available": 12,
+    "amenities": ["Kitchen", "Outdoor", "Lounge"]
+  },
+  {
+    "id": 3,
+    "level": "Level 3",
+    "available": 14,
+    "amenities": ["Kitchen", "Outdoor", "Lounge"]
+  }
+]
