@@ -3,6 +3,10 @@ export class Floor {
     public id: number,
     public level: string,
     public available: number,
-    public amenities: string[]
+    public amenities: string[],
+    public workspaces: Array<{
+      id: string;
+      isAvailable: boolean;
+    }>
   ) {}
 }

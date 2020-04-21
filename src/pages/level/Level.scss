@@ -1,0 +1,7 @@
+$columns: 12;
+
+@for $i from 1 through $columns {
+  .workspace-#{$i} {
+    fill: red !important;
+  }
+}
