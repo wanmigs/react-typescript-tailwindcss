@@ -9,7 +9,12 @@ html {
   font-family: 'Quicksand', sans-serif;
   font-weight: normal;
   font-size: 14px;
-  background-color: #efefef;
+  background: rgb(81, 40, 128);
+  background: radial-gradient(
+    circle,
+    rgba(81, 40, 128, 1) 0%,
+    rgba(13, 0, 48, 1) 100%
+  );
 }
 
 .feather-icon {

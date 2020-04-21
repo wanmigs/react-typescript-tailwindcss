@@ -32,7 +32,6 @@
   padding: 2px;
   border-radius: 3px;
   max-width: 100%;
-  background: white;
 }
 
 #image-map {
@@ -48,22 +47,18 @@
   cursor: pointer;
 }
 
-.image-mapper-shape:hover {
-  fill: #9ae6b4;
-}
-
 .image-mapper-shape.active,
 .image-mapper-shape.active:hover {
-  fill: #feb2b2;
-  stroke: #f56565;
+  fill: #fdf5f5;
+  stroke: #fde8e8;
 }
 
-.standing-desks .image-mapper-shape.standing-chair {
-  fill: #f8fff8;
+.standing-desks .image-mapper-shape:not(.active).standing-chair {
+  fill: #f8fff8 !important;
   stroke: #e2f5de;
 }
 
-.standard-desks .image-mapper-shape.standard {
-  fill: #f8fff8;
+.standard-desks .image-mapper-shape:not(.active).standard {
+  fill: #f8fff8 !important;
   stroke: #e2f5de;
 }

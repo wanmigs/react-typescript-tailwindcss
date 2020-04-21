@@ -29,8 +29,7 @@ const FloorPlan: React.FC<Props> = ({ filter = 'View All', workspaces }) => {
 
         if (!workspace.isAvailable) {
           chairs.forEach((chair) => {
-            chair.style.fill = '#FDF5F5';
-            chair.style.stroke = '#FDE8E8';
+            chair.classList.add('active');
           });
           return;
         }

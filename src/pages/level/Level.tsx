@@ -38,13 +38,13 @@ const Level: React.FC = () => {
       style={{ ['--data-floor-count' as any]: 21 }}
     >
       <LevelDetail floor={floor} />
-      <section className="bg-white flex flex-col mx-4 p-6 ">
+      <section className="flex flex-col mx-4 p-6 ">
         <div className="flex justify-center">
           {options.map((option, key) => (
             <button
               key={key}
-              className={`border-2 mx-2 px-3 py-2 rounded-full font-semibold hover:bg-gray-200 focus:outine-none
-                ${selectedOption === option ? 'shadow-lg border-green-500' : ''}
+              className={`border-2 mx-2 px-3 py-2 rounded-full font-semibold hover:border-primary focus:outine-none text-white
+                ${selectedOption === option ? 'shadow-lg border-primary' : ''}
               `}
               onClick={() => onSelect(option)}
             >
