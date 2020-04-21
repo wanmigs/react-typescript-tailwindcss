@@ -5,6 +5,7 @@ import { getFloorById } from 'services/Floor';
 import LevelDetail from './components/LevelDetails';
 import FloorPlan from './components/FloorPlan';
 import 'dist/css/level.scss';
+import { Head } from 'components/Head';
 
 const Level: React.FC = () => {
   const [floor, setFloor] = useState<Floor | undefined | null>();
@@ -33,31 +34,35 @@ const Level: React.FC = () => {
   }
 
   return (
-    <section
-      className="max-w-2xl mx-auto"
-      style={{ ['--data-floor-count' as any]: 21 }}
-    >
-      <LevelDetail floor={floor} />
-      <section className="flex flex-col mx-4 p-6 ">
-        <div className="flex justify-center">
-          {options.map((option, key) => (
-            <button
-              key={key}
-              className={`border-2 mx-2 px-3 py-2 rounded-lg font-semibold hover:border-primary focus:outine-none text-white
-                ${selectedOption === option ? 'shadow-lg border-primary' : ''}
-              `}
-              onClick={() => onSelect(option)}
-            >
-              {option}
-            </button>
-          ))}
-        </div>
-        <span className="font-semibold mt-4 text-center text-gray-500 mb-8 select-none">
-          Click on a desk to select it
-        </span>
-        <FloorPlan filter={selectedOption} floor={floor} />
+    <React.Fragment>
+      <Head title={floor.level} />
+
+      <section
+        className="max-w-2xl mx-auto"
+        style={{ ['--data-floor-count' as any]: 21 }}
+      >
+        <LevelDetail floor={floor} />
+        <section className="flex flex-col mx-4 p-6 ">
+          <div className="flex justify-center">
+            {options.map((option, key) => (
+              <button
+                key={key}
+                className={`border-2 mx-2 px-3 py-2 rounded-full font-semibold hover:border-primary focus:outine-none text-white
+                  ${selectedOption === option ? 'shadow-lg border-primary' : ''}
+                `}
+                onClick={() => onSelect(option)}
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+          <span className="font-semibold mt-4 text-center text-gray-500 mb-8 select-none">
+            Click on a desk to select it
+          </span>
+          <FloorPlan filter={selectedOption} floor={floor} />
+        </section>
       </section>
-    </section>
+    </React.Fragment>
   );
 };
 
