@@ -43,7 +43,7 @@ const Level: React.FC = () => {
           {options.map((option, key) => (
             <button
               key={key}
-              className={`border-2 mx-2 px-3 py-2 rounded-full font-semibold hover:border-primary focus:outine-none text-white
+              className={`border-2 mx-2 px-3 py-2 rounded-lg font-semibold hover:border-primary focus:outine-none text-white
                 ${selectedOption === option ? 'shadow-lg border-primary' : ''}
               `}
               onClick={() => onSelect(option)}
