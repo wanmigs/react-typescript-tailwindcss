@@ -1,3 +1,4 @@
+import { Workspace } from 'types/Workspace';
 export class Floor {
   constructor(
     public id: number,
@@ -5,11 +6,6 @@ export class Floor {
     public spaces: number,
     public available: number,
     public amenities: string[],
-    public workspaces: Array<{
-      id: string;
-      isAvailable: boolean;
-      type: string;
-      equipments: string;
-    }>
+    public workspaces: Workspace[]
   ) {}
 }

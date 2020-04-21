@@ -53,12 +53,19 @@
   stroke: #fde8e8;
 }
 
-.standing-desks .image-mapper-shape:not(.active).standing-chair {
+.standing-desks .image-mapper-shape:not(.active):not(.standing-chair) {
   fill: #f8fff8 !important;
   stroke: #e2f5de;
+  cursor: default;
 }
 
-.standard-desks .image-mapper-shape:not(.active).standard {
+.standard-desks .image-mapper-shape:not(.active):not(.standard) {
   fill: #f8fff8 !important;
   stroke: #e2f5de;
+  cursor: default;
+}
+
+#image-map-wrapper .image-mapper-shape.reserve {
+  fill: #f8cf58 !important;
+  stroke: #eddc9a;
 }

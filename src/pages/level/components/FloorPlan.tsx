@@ -1,28 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import ReservationModal from './ReservationModal';
+import { Floor } from 'models/Floor.model';
+import { Workspace } from 'types/Workspace';
 
 /**
  * Definition props of FloorPlan component
  */
 interface Props {
   filter: string;
-  workspaces: Array<{
-    id: string;
-    isAvailable: boolean;
-  }>;
+  floor: Floor;
 }
 
-const FloorPlan: React.FC<Props> = ({ filter = 'View All', workspaces }) => {
-  const activeClass: {
-    [key: string]: string;
-  } = {
-    'View All': 'all',
-    'Standing desks': 'standing-desks',
-    'Standard desks': 'standard-desks',
-  };
+const activeClass: {
+  [key: string]: string;
+} = {
+  'View All': 'all',
+  'Standing desks': 'standing-desks',
+  'Standard desks': 'standard-desks',
+};
+
+const FloorPlan: React.FC<Props> = ({ filter = 'View All', floor }) => {
+  const [workspace, setWorkspace] = useState<Workspace | null>();
 
   useEffect(() => {
     const initializeCss = () => {
-      workspaces.forEach((workspace) => {
+      floor.workspaces.forEach((workspace) => {
         const chairs = document.querySelectorAll<SVGRectElement>(
           `.workspace-${workspace.id}`
         )!;
@@ -35,12 +37,22 @@ const FloorPlan: React.FC<Props> = ({ filter = 'View All', workspaces }) => {
         }
 
         chairs.forEach((chair) => {
+          chair.setAttribute('data-type', workspace.type);
           chair.onmouseenter = () => {
             updateSyle(chairs, '#9ae6b4');
           };
 
           chair.onmouseout = () => {
             updateSyle(chairs, '#ebffec');
+          };
+
+          chair.onclick = () => {
+            if (filter !== 'View All' && chair.dataset.type !== filter) return;
+            resetReservation();
+            setWorkspace(workspace);
+            chairs.forEach((chair) => {
+              chair.classList.add('reserve');
+            });
           };
         });
       });
@@ -56,10 +68,27 @@ const FloorPlan: React.FC<Props> = ({ filter = 'View All', workspaces }) => {
     };
 
     initializeCss();
-  }, [workspaces]);
+  }, [floor, filter]);
+
+  const handleClose = () => {
+    setWorkspace(null);
+    resetReservation();
+  };
+
+  const resetReservation = () => {
+    const chairs = document.querySelectorAll<SVGRectElement>('.reserve')!;
+    chairs.forEach((chair) => {
+      chair.classList.remove('reserve');
+    });
+  };
 
   return (
     <div id="image-map-wrapper" className={activeClass[filter]}>
+      <ReservationModal
+        level={floor.level}
+        workspace={workspace}
+        onClose={handleClose}
+      />
       <div id="image-map-container">
         <div id="image-map" className="image-mapper">
           <img src="/images/Floor-Plan.png" alt="Floor-Plan" />

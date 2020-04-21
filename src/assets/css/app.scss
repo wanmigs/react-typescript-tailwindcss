@@ -37,4 +37,8 @@ html {
   transition: opacity 250ms ease-in;
 }
 
+button:focus {
+  outline: none;
+}
+
 @import 'tailwindcss/utilities';

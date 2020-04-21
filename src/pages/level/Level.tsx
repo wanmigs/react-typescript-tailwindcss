@@ -55,7 +55,7 @@ const Level: React.FC = () => {
         <span className="font-semibold mt-4 text-center text-gray-500 mb-8 select-none">
           Click on a desk to select it
         </span>
-        <FloorPlan filter={selectedOption} workspaces={floor.workspaces} />
+        <FloorPlan filter={selectedOption} floor={floor} />
       </section>
     </section>
   );
