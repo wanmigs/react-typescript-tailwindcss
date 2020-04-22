@@ -1,4 +1,4 @@
-$image-height: 28rem;
+$image-height: 38rem;
 
 .levels {
   @apply duration-200 items-start p-4 transition-all cursor-pointer ease-linear;
@@ -19,19 +19,20 @@ $image-height: 28rem;
 
   .level-popup {
     @apply absolute bg-white flex flex-col px-6 py-3 rounded-lg shadow-2xl text-lg z-10 hidden;
-    right: calc(50% - 50px);
+    right: 45%;
   }
 
   .level-images-container {
     position: absolute;
-    right: -240px;
-    top: -35px;
+    right: -40%;
+    top: -66%;
   }
 
   .levels-floor {
     @apply absolute transform origin-bottom-right;
     height: $image-height;
-    top: -26px;
+    top: -20px;
+    left: -22px;
   }
 
   .levels-image {
@@ -53,7 +54,7 @@ $image-height: 28rem;
     }
 
     .level-details {
-      @apply opacity-100;
+      @apply opacity-100 z-20;
     }
 
     .level-popup {
@@ -67,11 +68,11 @@ $image-height: 28rem;
       left: 80%;
       width: 0;
       height: 0;
-      border: 10px solid transparent;
+      border: 1rem solid transparent;
       border-top-color: #fff;
       border-bottom: 0;
-      margin-left: -10px;
-      margin-bottom: -10px;
+      margin-left: -1rem;
+      margin-bottom: -1rem;
     }
 
     & > div .levels-floor {

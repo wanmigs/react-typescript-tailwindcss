@@ -1,12 +1,12 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Loading from 'components/Loading'
-import routes from "Routes";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Loading from 'components/Loading';
+import routes from 'Routes';
 
 const App = () => {
   return (
     <div className="antialiased flex flex-col h-screen">
-      <section className="container flex-1 mx-auto p-6">
+      <section className="flex-1 mx-auto overflow-x-hidden w-full">
         <Router>
           <React.Suspense fallback={<Loading />}>
             <Switch>

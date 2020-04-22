@@ -91,7 +91,11 @@ const FloorPlan: React.FC<Props> = ({ filter = 'View All', floor }) => {
       />
       <div id="image-map-container">
         <div id="image-map" className="image-mapper">
-          <img src="/images/Floor-Plan.png" alt="Floor-Plan" />
+          <img
+            className="w-full"
+            src="/images/Floor-Plan.png"
+            alt="Floor-Plan"
+          />
           <svg
             className="image-mapper-svg"
             preserveAspectRatio="xMidYMid meet"

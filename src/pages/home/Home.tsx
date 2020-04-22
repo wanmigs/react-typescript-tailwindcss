@@ -29,9 +29,7 @@ const Home: React.FC = () => {
             src="/images/logo.png"
             alt="logo"
           />
-          <span className="font-bold md:text-4xl text-2xl">
-            Welcome to 45 George St.
-          </span>
+          <span className="font-bold text-4xl">Welcome to 45 George St.</span>
         </div>
       </div>
       <section className="max-w-2xl mx-auto">{renderFloors()}</section>

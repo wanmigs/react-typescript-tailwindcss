@@ -37,10 +37,7 @@ const Level: React.FC = () => {
     <React.Fragment>
       <Head title={floor.level} />
 
-      <section
-        className="max-w-2xl mx-auto"
-        style={{ ['--data-floor-count' as any]: 21 }}
-      >
+      <section style={{ ['--data-floor-count' as any]: 21 }}>
         <LevelDetail floor={floor} />
         <section className="flex flex-col mx-4 p-6 ">
           <div className="flex justify-center">

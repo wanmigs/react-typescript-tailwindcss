@@ -40,7 +40,7 @@ const AllLevels: React.FC = () => {
               <span className="level-availability text-white text-lg">
                 {floor.available} available
               </span>
-              <div className="level-details flex mt-4 z-20">
+              <div className="level-details flex mt-4">
                 <Link to={`/level/${floor.id}`}>
                   <span
                     className={`block font-semibold px-4 py-2 rounded-md text-lg ${
@@ -84,8 +84,8 @@ const AllLevels: React.FC = () => {
       });
 
   return (
-    <section className="flex flex-col max-w-2xl mx-auto">
-      <section className="flex items-start mb-6">
+    <section className="flex flex-col mx-auto">
+      <section className="flex items-start mb-6 p-6">
         <img src="/images/Logo.png" alt="Logo" className="h-12 mr-3" />
         <div className="flex flex-1 justify-between text-white">
           <span className="text-lg opacity-75">
