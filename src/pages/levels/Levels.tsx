@@ -39,17 +39,17 @@ const AllLevels: React.FC = () => {
             onClick={() => setSelected(floor.id)}
           >
             <div className="absolute inset-0 levels-overlay z-10" />
-            <div className="flex flex-col ml-6 mt-2">
+            <div className="flex flex-col levels-container">
               <span className="level-title">{floor.level}</span>
               <span className="level-availability text-white text-lg">
                 {floor.available} available
               </span>
-              <div className="level-details flex mt-4 z-20">
+              <div className="level-details flex z-20">
                 <Link to={`/level/${floor.id}`}>
                   <span
-                    className={`block font-semibold px-4 py-2 rounded-md text-lg ${
+                    className={`rounded-lg text-xxl flex font-bold  justify-center items-center shadow-2xl ${
                       floor.available
-                        ? 'bg-primary'
+                        ? 'bg-primary  text-secondary'
                         : 'border border-primary text-primary'
                     }`}
                   >
@@ -62,7 +62,7 @@ const AllLevels: React.FC = () => {
               <span>{floor.spaces} spaces</span>
               <span
                 className={`font-bold ${
-                  floor.available ? 'text-green-500' : 'text-red-600'
+                  floor.available ? 'text-custom-green' : 'text-red-600'
                 }`}
               >
                 {floor.available} available
@@ -92,20 +92,25 @@ const AllLevels: React.FC = () => {
 
   return (
     <section className="flex flex-col mx-auto">
-      <section className="flex items-start mb-6 p-6">
-        <img src="/images/Logo.png" alt="Logo" className="h-12 mr-3" />
-        <div className="flex flex-1 justify-between text-white">
-          <span className="text-lg opacity-75">
-            Welcome to 44 <br />
-            George St
+      <section id="levels-wrapper" className="flex items-start">
+        <img src="/images/Logo.png" alt="Logo" id="logo" />
+        <div
+          id="level-header"
+          className="flex flex-1 justify-between text-white items-center"
+        >
+          <span id="level-location" className="text-lg opacity-75">
+            Welcome to <br />
+            44 George St
           </span>
           <div className="flex flex-col items-end">
-            <span className="opacity-75">{moment().format('D MMM YYYY')}</span>
-            <span className="font-semibold text-2xl">{time}</span>
+            <span className="text-lg opacity-75">
+              {moment().format('D MMM YYYY')}
+            </span>
+            <span className="font-semibold text-xl">{time}</span>
           </div>
         </div>
       </section>
-      <section className="text-center text-white mb-4">
+      <section className="text-center text-white mb-8">
         <p className="text-3xl">
           <span className="font-bold">350</span> available spaces
         </p>

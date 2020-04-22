@@ -1,3 +1,27 @@
+#level-details-container {
+  height: 23.6rem;
+  padding: 1.96rem 2.12rem;
+}
+
+#carousel {
+  img {
+    height: 9.92rem;
+    margin-right: 0.68rem;
+  }
+}
+
+#floor-wrapper {
+  margin-top: 1.712rem;
+
+  .selection {
+    border: 0.12rem solid transparent;
+  }
+
+  .selection.border-primary {
+    border: 0.12rem solid #ffd836;
+  }
+}
+
 .image-mapper {
   position: relative;
   -webkit-touch-callout: none;
@@ -25,6 +49,8 @@
 
 #image-map-wrapper {
   text-align: center;
+  width: 35.76rem;
+  margin: 0 auto;
 }
 
 #image-map-container {

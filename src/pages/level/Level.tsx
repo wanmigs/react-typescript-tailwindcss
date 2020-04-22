@@ -39,12 +39,12 @@ const Level: React.FC = () => {
 
       <section style={{ ['--data-floor-count' as any]: 21 }}>
         <LevelDetail floor={floor} />
-        <section className="flex flex-col mx-4 p-6 ">
+        <section className="flex flex-col" id="floor-wrapper">
           <div className="flex justify-center">
             {options.map((option, key) => (
               <button
                 key={key}
-                className={`border-2 mx-2 px-3 py-2 rounded-full font-semibold hover:border-primary focus:outine-none text-white
+                className={`selection mx-3 px-6 py-2 rounded-lg font-semibold hover:border-primary focus:outine-none text-white
                   ${selectedOption === option ? 'shadow-lg border-primary' : ''}
                 `}
                 onClick={() => onSelect(option)}
@@ -53,7 +53,7 @@ const Level: React.FC = () => {
               </button>
             ))}
           </div>
-          <span className="font-semibold mt-4 text-center text-gray-500 mb-8 select-none">
+          <span className="font-semibold mt-5 text-center text-gray-500 mb-8 select-none">
             Click on a desk to select it
           </span>
           <FloorPlan filter={selectedOption} floor={floor} />

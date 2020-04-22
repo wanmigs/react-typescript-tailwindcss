@@ -1,7 +1,31 @@
 #reservation-modal {
-  --transform-translate-y: -22rem;
+  --transform-translate-y: -28rem;
+  height: 26.88rem;
 }
 
 #reservation-modal.active {
   --transform-translate-y: 0;
+}
+
+#reserve-image-wrapper {
+  width: 11.84rem;
+  height: 11.84rem;
+  background: rgba(239, 239, 239, 0.5);
+  img {
+    width: 8.68rem;
+    height: 6.16rem;
+  }
+}
+
+#modal-close {
+  img {
+    height: 5.4rem;
+    width: 5.4rem;
+  }
+}
+
+#reserve-button {
+  width: 24.52rem;
+  height: 5.24rem;
+  border-radius: 1.16rem;
 }

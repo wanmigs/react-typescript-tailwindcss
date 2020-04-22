@@ -18,35 +18,38 @@ const LevelDetail: React.FC<Props> = ({ floor }) => {
   }
 
   return (
-    <div className="bg-white relative shadow-lg ">
-      <div className="flex items-center justify-start mb-8">
-        <Link to="/">
-          <span className="border duration-150 ease-in-out flex font-semibold hover:bg-gray-200 hover:text-blue-600 items-center px-2 py-1 rounded-md shadow-lg text-gray-700 text-lg transition">
-            <svg className="feather-icon h-12 w-12">
-              <use xlinkHref="/images/svg/feather-sprite.svg#chevron-left" />
-            </svg>
-          </span>
-        </Link>
+    <div id="level-details-container" className="bg-white relative shadow-lg">
+      <Link to="/">
+        <span className="border duration-150 ease-in-out flex font-semibold hover:bg-gray-200 hover:text-blue-600 items-center px-2 py-1 rounded-md shadow-lg text-gray-700 text-lg transition absolute bg-white top-0 left-0 m-4">
+          <svg className="feather-icon h-12 w-12">
+            <use xlinkHref="/images/svg/feather-sprite.svg#chevron-left" />
+          </svg>
+        </span>
+      </Link>
+      {/* <Carousel slidesPerPage={3} arrows={true} offset={20}>
+        <img
+          src="https://pbs.twimg.com/profile_images/1204987711326580736/F17RQDVl_400x400.jpg"
+          alt={floor.level}
+        />
+        <img
+          src="https://pbs.twimg.com/profile_images/1204987711326580736/F17RQDVl_400x400.jpg"
+          alt={floor.level}
+        />
+      </Carousel> */}
+      <div id="carousel" className="flex">
+        <img src="/images/Image-21.png" alt="alt-21" />
+        <img src="/images/Image-22.png" alt="alt-22" />
+        <img src="/images/Image-23.png" alt="alt-23" />
       </div>
-      <Carousel slidesPerPage={3} arrows={true} offset={20}>
-        <img
-          src="https://pbs.twimg.com/profile_images/1204987711326580736/F17RQDVl_400x400.jpg"
-          alt={floor.level}
-        />
-        <img
-          src="https://pbs.twimg.com/profile_images/1204987711326580736/F17RQDVl_400x400.jpg"
-          alt={floor.level}
-        />
-      </Carousel>
 
-      <section className="px-6 pb-6">
-        <section className="flex items-start justify-between mt-4 relative">
+      <section className="">
+        <section className="flex items-start justify-between relative">
           <div>
-            <span className="bg-white font-bold text-5xl pr-6 text-4xl">
+            <span className="bg-white font-bold pr-6 text-4xl">
               {floor.level}
             </span>
             <span className="flex items-center ">
-              <span className="-mt-3 font-bold text-2xl text-green-500">
+              <span className="-mt-3 font-bold text-xxl text-custom-green">
                 {floor.available} spaces available
               </span>
             </span>
@@ -66,7 +69,7 @@ const LevelDetail: React.FC<Props> = ({ floor }) => {
               ))}
             </div>
           </div>
-          <div className="h-32 w-32 canvas">
+          <div className="canvas">
             <QRCode value={window.location.href} size={200} />
           </div>
         </section>

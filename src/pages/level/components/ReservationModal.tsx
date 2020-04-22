@@ -20,24 +20,25 @@ const ReservationModal: React.FC<Props> = ({ level, workspace, onClose }) => {
         workspace ? 'active' : ''
       }`}
     >
-      <section className="max-w-2xl mx-auto">
+      <section className="mx-auto">
         <section className="flex justify-end">
-          <button className="bg-gray-200 m-3 p-1" onClick={onClose}>
-            <svg className="feather-icon w-10 h-10">
-              <use xlinkHref="/images/svg/feather-sprite.svg#x" />
-            </svg>
+          <button className="m-5" onClick={onClose} id="modal-close">
+            <img src="/images/x.svg" alt="close" />
           </button>
         </section>
 
-        <section className="flex justify-center mb-8">
-          <span className="bg-gray-300 flex h-24 h-32 items-center justify-center rounded-full w-32">
-            <svg className="feather-icon h-24 text-gray-500 w-24">
-              <use xlinkHref="/images/svg/feather-sprite.svg#monitor" />
-            </svg>
+        <section className="flex justify-center mb-4 -mt-10">
+          <span
+            id="reserve-image-wrapper"
+            className="flex items-center justify-center rounded-full w-32"
+          >
+            <img src="/images/Desk.svg" alt="Desk" />
           </span>
           {workspace && (
-            <div className="flex flex-col font-semibold items-start leading-9 ml-8">
-              <span className="font-black text-3xl">Desk A{workspace.id}</span>
+            <div className="flex flex-col items-start leading-9 ml-6">
+              <span className="font-bold text-4xl mb-3">
+                Desk A{workspace.id}
+              </span>
               <span>{level}</span>
               <span>{workspace.type}</span>
               <span>{workspace.equipments || 'No Equipment'}</span>
@@ -45,7 +46,10 @@ const ReservationModal: React.FC<Props> = ({ level, workspace, onClose }) => {
           )}
         </section>
         <Link to="/reserve">
-          <span className="bg-primary focus:outine-none font-bold font-semibold mx-2 px-24 px-3 py-2 rounded-lg text-2xl text-black">
+          <span
+            id="reserve-button"
+            className="flex justify-center items-center mx-auto bg-primary focus:outine-none font-bold font-semibold text-3xl text-secondary"
+          >
             Reserve
           </span>
         </Link>

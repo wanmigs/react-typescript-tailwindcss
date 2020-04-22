@@ -8,7 +8,7 @@ body,
 html {
   font-family: 'Manrope', sans-serif;
   font-weight: normal;
-  font-size: 1.7vw;
+  font-size: 2.315vw;
   background-image: url('/images/Bg.png');
   background-position: center top;
   background-size: cover;
@@ -38,9 +38,15 @@ button:focus {
   outline: none;
 }
 
-.canvas canvas {
-  width: 100% !important;
-  height: 100% !important;
+.canvas {
+  width: 6.24rem;
+  height: 6.24rem;
+  margin-top: 1.08rem;
+
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
 }
 
 @import 'tailwindcss/utilities';

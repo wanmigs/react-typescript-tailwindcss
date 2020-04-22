@@ -1,11 +1,29 @@
 $image-height: 38rem;
+#levels-wrapper {
+  padding-top: 1.76rem;
+  margin-bottom: 1.92rem;
+}
+
+#logo {
+  width: 5.04rem;
+  margin-right: 0.64rem;
+  margin-left: 2.12rem;
+}
+#level-header {
+  padding-right: 2.36rem;
+}
+
+#level-location {
+  font-size: 1.6rem;
+  line-height: 1.48rem;
+}
 
 .levels {
-  @apply duration-200 items-start p-4 transition-all cursor-pointer ease-linear;
-  height: 7rem;
+  @apply duration-200 items-start transition-all cursor-pointer ease-linear;
+  height: 8.4rem;
 
   .level-title {
-    @apply font-bold text-3xl duration-300 transition-all ease-linear;
+    @apply font-bold text-2xl duration-300 transition-all ease-linear;
     color: #ffffffbf;
   }
 
@@ -15,47 +33,65 @@ $image-height: 38rem;
 
   .level-details {
     @apply duration-200 opacity-0 transition-all;
+    margin-top: 1.2rem;
+
+    & span {
+      height: 3.44rem;
+      padding: 0.8rem 2rem;
+    }
   }
 
   .level-popup {
-    @apply absolute bg-white flex flex-col px-6 py-3 rounded-lg shadow-2xl text-lg z-10 hidden;
-    right: 45%;
+    @apply absolute bg-white flex flex-col rounded-lg shadow-2xl text-lg z-10 hidden;
+    left: 18rem;
+    top: 7.16rem;
+    padding: 0.88rem 1.68rem;
   }
 
   .triangle-right {
     width: 0;
     height: 0;
-    border-top: 4.9rem solid transparent;
-    border-left: 7.5rem solid rgba(255, 255, 255, 0.18);
-    border-bottom: 1rem solid transparent;
+    border-top: 4.6rem solid transparent;
+    border-left: 7rem solid rgba(255, 255, 255, 0.18);
+    border-bottom: 3rem solid transparent;
     position: absolute;
-    left: 5.5%;
-    top: 12.1%;
+    left: 6.2%;
+    top: -4.7%;
     opacity: 1;
+  }
+
+  .levels-container {
+    padding-left: 3.76rem;
+    padding-top: 1.76rem;
   }
 
   .level-images-container {
     position: absolute;
-    right: -40%;
-    top: -66%;
+    right: -49%;
+    top: 16%;
   }
 
   .levels-floor {
     @apply absolute transform origin-bottom-right;
-    height: $image-height;
-    top: -10%;
-    left: -1.2rem;
+    height: 34.92rem;
+    top: -22.9%;
+    left: -1rem;
   }
 
   .levels-image {
     @apply duration-200 opacity-0 transform transition-all  -translate-y-12 translate-x-8 relative z-10;
-    height: $image-height;
+    height: 30.6rem;
   }
 
   &.active {
+    .levels-container {
+      padding-left: 3.52rem;
+      padding-top: 4.4rem;
+    }
+
     @apply opacity-100;
     background: #ffffff2e;
-    height: 11rem;
+    height: 17.56rem;
 
     .level-title {
       @apply text-4xl text-white;
