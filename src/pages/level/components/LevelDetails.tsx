@@ -66,7 +66,7 @@ const LevelDetail: React.FC<Props> = ({ floor }) => {
               ))}
             </div>
           </div>
-          <div className="h-32 w-32">
+          <div className="h-32 w-32 canvas">
             <QRCode value={window.location.href} size={200} />
           </div>
         </section>

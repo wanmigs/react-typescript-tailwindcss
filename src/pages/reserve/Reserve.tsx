@@ -46,7 +46,7 @@ const Reserve: React.FC = () => {
           className="bg-white flex flex-col items-center mb-2 px-4 pb-4 pt-6 rounded-lg shadow-2xl w-48"
         >
           <div id="bottom-circles" />
-          <div className="opacity-0 transition-opacity duration-100">
+          <div className="opacity-0 transition-opacity duration-100 canvas">
             <QRCode value={window.location.href} size={100} />
           </div>
         </section>
