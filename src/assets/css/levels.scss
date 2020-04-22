@@ -43,7 +43,7 @@ $image-height: 38rem;
   .levels-floor {
     @apply absolute transform origin-bottom-right;
     height: $image-height;
-    top: -20px;
+    top: -10%;
     left: -1.2rem;
   }
 
