@@ -1,0 +1,7 @@
+#reservation-modal {
+  --transform-translate-y: -22rem;
+}
+
+#reservation-modal.active {
+  --transform-translate-y: 0;
+}

@@ -138,30 +138,30 @@
     "id": 2,
     "level": "Level 2",
     "spaces": 21,
-    "available": 15,
+    "available": 0,
     "amenities": ["Kitchen", "Outdoor", "Lounge"],
     "workspaces": [
       {
         "id": 1,
-        "isAvailable": true,
+        "isAvailable": false,
         "type": "Standing desks",
         "equipments": ""
       },
       {
         "id": 2,
-        "isAvailable": true,
+        "isAvailable": false,
         "type": "Standing desks",
         "equipments": ""
       },
       {
         "id": 3,
-        "isAvailable": true,
+        "isAvailable": false,
         "type": "Standing desks",
         "equipments": ""
       },
       {
         "id": 4,
-        "isAvailable": true,
+        "isAvailable": false,
         "type": "Standing desks",
         "equipments": ""
       },
@@ -179,19 +179,19 @@
       },
       {
         "id": 7,
-        "isAvailable": true,
+        "isAvailable": false,
         "type": "Standing desks",
         "equipments": ""
       },
       {
         "id": 8,
-        "isAvailable": true,
+        "isAvailable": false,
         "type": "Standing desks",
         "equipments": ""
       },
       {
         "id": 9,
-        "isAvailable": true,
+        "isAvailable": false,
         "type": "Standing desks",
         "equipments": ""
       },
@@ -209,37 +209,37 @@
       },
       {
         "id": 12,
-        "isAvailable": true,
+        "isAvailable": false,
         "type": "Standard desks",
         "equipments": ""
       },
       {
         "id": 13,
-        "isAvailable": true,
+        "isAvailable": false,
         "type": "Standard desks",
         "equipments": ""
       },
       {
         "id": 14,
-        "isAvailable": true,
+        "isAvailable": false,
         "type": "Standard desks",
         "equipments": ""
       },
       {
         "id": 15,
-        "isAvailable": true,
+        "isAvailable": false,
         "type": "Standard desks",
         "equipments": ""
       },
       {
         "id": 16,
-        "isAvailable": true,
+        "isAvailable": false,
         "type": "Standard desks",
         "equipments": ""
       },
       {
         "id": 17,
-        "isAvailable": true,
+        "isAvailable": false,
         "type": "Standard desks",
         "equipments": ""
       },
@@ -251,13 +251,13 @@
       },
       {
         "id": 19,
-        "isAvailable": true,
+        "isAvailable": false,
         "type": "Standard desks",
         "equipments": ""
       },
       {
         "id": 20,
-        "isAvailable": true,
+        "isAvailable": false,
         "type": "Standard desks",
         "equipments": ""
       },

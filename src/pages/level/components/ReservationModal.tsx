@@ -1,6 +1,8 @@
 import React from 'react';
 import { Workspace } from 'types/Workspace';
 import { Link } from 'react-router-dom';
+import './Reservation.scss';
+
 /**
  * Definition for ReservationModal Props
  */
@@ -11,12 +13,13 @@ interface Props {
 }
 
 const ReservationModal: React.FC<Props> = ({ level, workspace, onClose }) => {
-  if (!workspace) {
-    return null;
-  }
-
   return (
-    <div className="bg-white fixed inset-x-0 pb-10 shadow-lg top-0 z-50">
+    <div
+      id="reservation-modal"
+      className={`bg-white duration-200 fixed inset-x-0 pb-10 shadow-lg top-0 transform transition-all z-50 ease-linear ${
+        workspace ? 'active' : ''
+      }`}
+    >
       <section className="max-w-2xl mx-auto">
         <section className="flex justify-end">
           <button className="bg-gray-200 m-3 p-1" onClick={onClose}>
@@ -32,12 +35,14 @@ const ReservationModal: React.FC<Props> = ({ level, workspace, onClose }) => {
               <use xlinkHref="/images/svg/feather-sprite.svg#monitor" />
             </svg>
           </span>
-          <div className="flex flex-col font-semibold items-start leading-9 ml-8">
-            <span className="font-black text-3xl">Desk A{workspace.id}</span>
-            <span>{level}</span>
-            <span>{workspace.type}</span>
-            <span>{workspace.equipments || 'No Equipment'}</span>
-          </div>
+          {workspace && (
+            <div className="flex flex-col font-semibold items-start leading-9 ml-8">
+              <span className="font-black text-3xl">Desk A{workspace.id}</span>
+              <span>{level}</span>
+              <span>{workspace.type}</span>
+              <span>{workspace.equipments || 'No Equipment'}</span>
+            </div>
+          )}
         </section>
         <Link to="/reserve">
           <span className="bg-primary focus:outine-none font-bold font-semibold mx-2 px-24 px-3 py-2 rounded-lg text-2xl text-black">

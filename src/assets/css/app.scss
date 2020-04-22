@@ -9,12 +9,9 @@ html {
   font-family: 'Manrope', sans-serif;
   font-weight: normal;
   font-size: 14px;
-  background: rgb(81, 40, 128);
-  background: radial-gradient(
-    circle,
-    rgba(81, 40, 128, 1) 0%,
-    rgba(13, 0, 48, 1) 100%
-  );
+  background-image: url('/images/Bg.png');
+  background-position: center top;
+  background-size: cover;
 }
 
 .feather-icon {
