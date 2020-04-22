@@ -25,13 +25,13 @@ $image-height: 38rem;
   .triangle-right {
     width: 0;
     height: 0;
-    border-top: 60px solid transparent;
-    border-left: 90px solid #ffffff2e;
-    border-bottom: 35px solid transparent;
+    border-top: 4.9rem solid transparent;
+    border-left: 7.5rem solid rgba(255, 255, 255, 0.18);
+    border-bottom: 4rem solid transparent;
     position: absolute;
-    right: calc(50% - 84px);
-    top: calc(50% - 56px);
-    @apply opacity-100;
+    left: 5.5%;
+    top: 12.1%;
+    opacity: 1;
   }
 
   .level-images-container {
@@ -44,7 +44,7 @@ $image-height: 38rem;
     @apply absolute transform origin-bottom-right;
     height: $image-height;
     top: -20px;
-    left: -22px;
+    left: -1.2rem;
   }
 
   .levels-image {

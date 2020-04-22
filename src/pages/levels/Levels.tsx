@@ -44,14 +44,6 @@ const AllLevels: React.FC = () => {
               <span className="level-availability text-white text-lg">
                 {floor.available} available
               </span>
-              <div>
-                {floor.id !== lastID && (
-                  <div
-                    className="triangle-right"
-                    style={{ zIndex: floor.id }}
-                  />
-                )}
-              </div>
               <div className="level-details flex mt-4 z-20">
                 <Link to={`/level/${floor.id}`}>
                   <span
@@ -90,6 +82,9 @@ const AllLevels: React.FC = () => {
                 className="levels-image"
                 alt={floor.level}
               />
+              {floor.id !== lastID && (
+                <div className="triangle-right" style={{ zIndex: floor.id }} />
+              )}
             </div>
           </li>
         );
