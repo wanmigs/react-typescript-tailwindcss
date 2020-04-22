@@ -9,11 +9,17 @@ const AllLevels: React.FC = () => {
   const [floors, setFloors] = useState<Floor[]>([]);
   const [selected, setSelected] = useState<number>(1);
   const [time, setTime] = useState(moment().format('h:mm'));
+  const [lastID, setID] = useState<number>(1);
 
   useEffect(() => {
     getFloors().then((data) => {
       setFloors(data);
       setSelected(data.length);
+      console.log('floors:', data)
+      for(let x = 0; x < data.length; x++){
+        console.log(data[x].id)
+        setID(data[x].id)
+      }
     });
 
     setInterval(() => {
@@ -33,13 +39,18 @@ const AllLevels: React.FC = () => {
             }`}
             key={key}
             onClick={() => setSelected(floor.id)}
-          >
+          > 
             <div className="absolute inset-0 levels-overlay z-10" />
             <div className="flex flex-col ml-6 mt-2">
               <span className="level-title">{floor.level}</span>
               <span className="level-availability text-white text-lg">
                 {floor.available} available
               </span>
+              <div>
+              {floor.id !== lastID &&
+              <div className="triangle-right"  style={{ zIndex: floor.id }}></div>
+              }
+              </div>   
               <div className="level-details flex mt-4 z-20">
                 <Link to={`/level/${floor.id}`}>
                   <span
