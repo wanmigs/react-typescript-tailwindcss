@@ -22,6 +22,18 @@ $image-height: 38rem;
     right: 45%;
   }
 
+  .triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-left: 90px solid #ffffff2e;
+    border-bottom: 35px solid transparent;
+    position: absolute;
+    right: calc(50% - 84px);
+    top: calc(50% - 56px);
+    @apply opacity-100;
+  }
+
   .level-images-container {
     position: absolute;
     right: -40%;
@@ -47,6 +59,10 @@ $image-height: 38rem;
 
     .level-title {
       @apply text-4xl text-white;
+    }
+
+    .triangle-right {
+      display: none;
     }
 
     .level-availability {

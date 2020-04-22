@@ -9,11 +9,15 @@ const AllLevels: React.FC = () => {
   const [floors, setFloors] = useState<Floor[]>([]);
   const [selected, setSelected] = useState<number>(1);
   const [time, setTime] = useState(moment().format('h:mm'));
+  const [lastID, setID] = useState<number>(1);
 
   useEffect(() => {
     getFloors().then((data) => {
       setFloors(data);
       setSelected(data.length);
+      for (let x = 0; x < data.length; x++) {
+        setID(data[x].id);
+      }
     });
 
     setInterval(() => {
@@ -40,7 +44,15 @@ const AllLevels: React.FC = () => {
               <span className="level-availability text-white text-lg">
                 {floor.available} available
               </span>
-              <div className="level-details flex mt-4">
+              <div>
+                {floor.id !== lastID && (
+                  <div
+                    className="triangle-right"
+                    style={{ zIndex: floor.id }}
+                  />
+                )}
+              </div>
+              <div className="level-details flex mt-4 z-20">
                 <Link to={`/level/${floor.id}`}>
                   <span
                     className={`block font-semibold px-4 py-2 rounded-md text-lg ${
