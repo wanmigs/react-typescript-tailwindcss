@@ -44,16 +44,10 @@ const AllLevels: React.FC = () => {
               <span className="level-availability text-white text-lg">
                 {floor.available} available
               </span>
-              <div className="level-details flex z-20">
+              <div className="level-details flex">
                 <Link to={`/level/${floor.id}`}>
-                  <span
-                    className={`rounded-lg text-xxl flex font-bold  justify-center items-center shadow-2xl ${
-                      floor.available
-                        ? 'bg-primary  text-secondary'
-                        : 'border border-primary text-primary'
-                    }`}
-                  >
-                    {floor.available ? 'Select' : 'View details'}
+                  <span className="rounded-lg text-xxl flex font-bold  justify-center items-center shadow-2xl border border-primary text-primary">
+                    View details
                   </span>
                 </Link>
               </div>
