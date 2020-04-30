@@ -9,7 +9,8 @@ html {
   font-family: 'Manrope', sans-serif;
   font-weight: normal;
   font-size: 2.315vw;
-  background-image: url('/images/Bg.png');
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
   background-position: center top;
   background-size: cover;
 }
@@ -47,6 +48,31 @@ button:focus {
     width: 100% !important;
     height: 100% !important;
   }
+}
+
+* {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.text-primary {
+  color: var(--button-bg-color);
+}
+
+.text-secondary {
+  color: var(--button-text-color);
+}
+
+.border-primary {
+  border-color: var(--button-bg-color);
+}
+
+.btn-border {
+  border-color: var(--button-border-color);
+}
+
+.bg-primary {
+  background-color: var(--button-bg-color);
 }
 
 @import 'tailwindcss/utilities';

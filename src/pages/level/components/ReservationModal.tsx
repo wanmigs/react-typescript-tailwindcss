@@ -48,7 +48,7 @@ const ReservationModal: React.FC<Props> = ({ level, workspace, onClose }) => {
         <Link to="/reserve">
           <span
             id="reserve-button"
-            className="flex justify-center items-center mx-auto bg-primary focus:outine-none font-bold font-semibold text-3xl text-secondary"
+            className="flex justify-center items-center mx-auto bg-primary focus:outine-none font-bold font-semibold text-3xl text-secondary btn-border border"
           >
             Reserve
           </span>

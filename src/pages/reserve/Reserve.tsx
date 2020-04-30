@@ -66,7 +66,7 @@ const Reserve: React.FC = () => {
         <Link to="/">
           <span
             id="confirm-button"
-            className="-translate-y-64 bg-primary block duration-300 focus:outine-none font-black rounded-lg scale-125 text-3xl text-secondary transform transition w-48 flex justify-center items-center"
+            className="-translate-y-64 bg-primary block duration-300 focus:outine-none font-black rounded-lg scale-125 text-3xl text-secondary transform transition w-48 flex justify-center items-center btn-border border"
           >
             OK
           </span>

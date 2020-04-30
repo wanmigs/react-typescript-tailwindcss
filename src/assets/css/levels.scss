@@ -1,4 +1,9 @@
 $image-height: 38rem;
+
+.font-color {
+  color: var(--font-color);
+}
+
 #levels-wrapper {
   padding-top: 1.76rem;
   margin-bottom: 1.92rem;
@@ -18,17 +23,34 @@ $image-height: 38rem;
   line-height: 1.48rem;
 }
 
+svg {
+  #path0 {
+    fill: var(--bg-floor);
+  }
+  #path2 {
+    fill: rgba(255, 255, 255, 0.1);
+  }
+  #path3 {
+    fill: rgba(255, 255, 255, 0.2);
+  }
+}
+
 .levels {
   @apply duration-200 items-start transition-all cursor-pointer ease-linear;
   height: 8.4rem;
 
   .level-title {
     @apply font-bold text-2xl duration-300 transition-all ease-linear;
-    color: #ffffffbf;
+    color: var(--font-color);
   }
 
   .level-availability {
-    color: #ffffffbf;
+    color: var(--font-color);
+  }
+
+  .level-title,
+  .level-availability {
+    @apply opacity-75;
   }
 
   .level-details {
@@ -52,11 +74,11 @@ $image-height: 38rem;
     width: 0;
     height: 0;
     border-top: 4.6rem solid transparent;
-    border-left: 7rem solid rgba(255, 255, 255, 0.18);
+    border-left: 7rem solid var(--bg-highlight);
     border-bottom: 3rem solid transparent;
     position: absolute;
     left: 6.2%;
-    top: -4.7%;
+    top: -4.8%;
     opacity: 1;
   }
 
@@ -74,8 +96,8 @@ $image-height: 38rem;
   .levels-floor {
     @apply absolute transform origin-bottom-right;
     height: 34.92rem;
-    top: -22.9%;
-    left: -1rem;
+    top: -29.7%;
+    left: -1.6rem;
   }
 
   .levels-image {
@@ -90,11 +112,11 @@ $image-height: 38rem;
     }
 
     @apply opacity-100;
-    background: #ffffff2e;
+    background: var(--bg-highlight);
     height: 17.56rem;
 
     .level-title {
-      @apply text-4xl text-white;
+      @apply text-4xl opacity-100;
     }
 
     .triangle-right {

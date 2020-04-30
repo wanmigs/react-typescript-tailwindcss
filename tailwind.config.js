@@ -2,8 +2,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#FFD836',
-        secondary: '#2B1153',
         'custom-green': '#3C9D00',
       },
       fontSize: {
@@ -18,6 +16,9 @@ module.exports = {
         '4xl': '2.4rem', // 60px
         '5xl': '3rem',
         '6xl': '4rem',
+      },
+      borderWidth: {
+        default: '.12rem',
       },
     },
   },

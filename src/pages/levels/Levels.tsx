@@ -4,12 +4,15 @@ import { Floor } from 'models/Floor.model';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import 'dist/css/levels.scss';
+import { useAppState } from 'providers/AppProvider';
+import { ReactComponent as FloorSvg } from 'assets/svg/Floor.svg';
 
 const AllLevels: React.FC = () => {
   const [floors, setFloors] = useState<Floor[]>([]);
   const [selected, setSelected] = useState<number>(1);
   const [time, setTime] = useState(moment().format('h:mm'));
   const [lastID, setID] = useState<number>(1);
+  const { theme } = useAppState();
 
   useEffect(() => {
     getFloors().then((data) => {
@@ -46,8 +49,14 @@ const AllLevels: React.FC = () => {
               </span>
               <div className="level-details flex">
                 <Link to={`/level/${floor.id}`}>
-                  <span className="rounded-lg text-xxl flex font-bold  justify-center items-center shadow-2xl border border-primary text-primary">
-                    View details
+                  <span
+                    className={`border rounded-lg text-xxl flex font-bold  justify-center items-center shadow-2xl ${
+                      floor.available
+                        ? 'bg-primary  text-secondary btn-border'
+                        : 'border-primary text-primary'
+                    }`}
+                  >
+                    {floor.available ? 'Select' : 'View details'}
                   </span>
                 </Link>
               </div>
@@ -66,11 +75,7 @@ const AllLevels: React.FC = () => {
               style={{ zIndex: floor.id }}
               className="level-images-container"
             >
-              <img
-                className="levels-floor z-10"
-                src="/images/Floor.png"
-                alt={floor.level}
-              />
+              <FloorSvg className="levels-floor z-10" />
               <img
                 src="/images/Active-Floor.png"
                 className="levels-image"
@@ -87,16 +92,22 @@ const AllLevels: React.FC = () => {
   return (
     <section className="flex flex-col mx-auto">
       <section id="levels-wrapper" className="flex items-start">
-        <img src="/images/Logo.png" alt="Logo" id="logo" />
+        <img
+          src={`${theme?.logo || '/images/Logo.png'}`}
+          alt="Logo"
+          id="logo"
+        />
         <div
           id="level-header"
           className="flex flex-1 justify-between text-white items-center"
         >
-          <span id="level-location" className="text-lg opacity-75">
-            Welcome to <br />
-            44 George St
+          <span
+            id="level-location"
+            className="text-lg opacity-75 whitespace-pre font-color"
+          >
+            {theme?.welcomeMessage}
           </span>
-          <div className="flex flex-col items-end">
+          <div className="flex flex-col items-end font-color">
             <span className="text-lg opacity-75">
               {moment().format('D MMM YYYY')}
             </span>
@@ -104,7 +115,7 @@ const AllLevels: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="text-center text-white mb-8">
+      <section className="text-center text-white mb-8 font-color">
         <p className="text-3xl">
           <span className="font-bold">350</span> available spaces
         </p>

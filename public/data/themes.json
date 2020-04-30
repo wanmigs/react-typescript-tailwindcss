@@ -1,0 +1,54 @@
+{
+  "default": {
+    "welcomeMessage": "Welcome to 44\nGeorge St",
+    "logo": "/images/Logo.png",
+    "backgroundColor": "",
+    "backgroundImage": "/images/Bg.png",
+    "floorBackground": "#2f0d56",
+    "highlightBackground": "#ffffff",
+    "fontColor": "#ffffff",
+    "fontFamily": "",
+    "buttonBackground": "#ffd700",
+    "buttonBorder": "",
+    "buttonText": "#2f0d56"
+  },
+  "anz": {
+    "welcomeMessage": "Welcome",
+    "logo": "",
+    "backgroundColor": "#ffd500",
+    "backgroundImage": "",
+    "floorBackground": "#efefef",
+    "highlightBackground": "#ffffff",
+    "fontColor": "#000",
+    "fontFamily": "",
+    "buttonBackground": "#000",
+    "buttonBorder": "",
+    "buttonText": "#fff"
+  },
+  "celesse": {
+    "welcomeMessage": "",
+    "logo": "",
+    "backgroundColor": "#f1c3c5",
+    "backgroundImage": "",
+    "floorBackground": "#d45b5f",
+    "highlightBackground": "#d45b5f",
+    "fontColor": "#000000",
+    "fontFamily": "",
+    "buttonBackground": "#920000",
+    "buttonBorder": "",
+    "buttonText": "#FFFFFF"
+  },
+  "commonwealth": {
+    "welcomeMessage": "Welcome",
+    "logo": "",
+    "backgroundColor": "#ffd500",
+    "backgroundImage": "",
+    "floorBackground": "#efefef",
+    "highlightBackground": "#ffffff",
+    "fontColor": "#ffffff",
+    "fontFamily": "",
+    "buttonBackground": "#000",
+    "buttonBorder": "",
+    "buttonText": "#FFFFFF"
+  }
+}
